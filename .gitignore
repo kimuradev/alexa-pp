@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-lambda/node_modules
-.ask/
-hooks/
-=======
-node_modules/
-package-lock.json
-.DS_Store
->>>>>>> 12f86c1c96fe062b13d1cf6afec7108c2fc77084
