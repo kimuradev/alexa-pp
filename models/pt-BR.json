@@ -1,0 +1,144 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "partiu poupar",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AnswerIntent",
+                    "slots": [
+                        {
+                            "name": "Answer",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "a reposta é {Answer}",
+                        "minha resposta é {Answer}",
+                        "é {Answer}",
+                        "{Answer} é minha resposta",
+                        "{Answer}"
+                    ]
+                },
+                {
+                    "name": "DontKnowIntent",
+                    "slots": [],
+                    "samples": [
+                        "eu não sei",
+                        "não sei",
+                        "eu não sei essa",
+                        "pular",
+                        "quem sabe",
+                        "eu não sei essa questão"
+                    ]
+                },
+                {
+                    "name": "QuestionsIntent",
+                    "slots": [],
+                    "samples": [
+                        "começar",
+                        "iniciar",
+                        "iniciar perguntas"
+                    ]
+                },
+                {
+                    "name": "UserIntent",
+                    "slots": [
+                        {
+                            "name": "nome",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "idade",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{nome} {idade}",
+                        "{idade} anos",
+                        "tenho {idade} anos",
+                        "{idade}",
+                        "qual sua {idade} ",
+                        "{nome}",
+                        "meu nome é {nome}",
+                        "qual é o seu {nome}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "QuestionsIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": []
+                },
+                {
+                    "name": "UserIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "nome",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "idade",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.356342064804.1133622735709"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.828350886456.665028301250",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Eu sou o Partiu Poupar. Qual é o seu {nome} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.356342064804.1133622735709",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Quantos anos você tem?"
+                    }
+                ]
+            }
+        ]
+    }
+}
