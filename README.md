@@ -1,0 +1,1 @@
+# Alexa, abrir Partiu Poupar
